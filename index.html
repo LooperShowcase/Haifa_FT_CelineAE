@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <script src="scrip.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <center>
+    <button onclick="speak()">Allow Audio</button>
+    <div class="container">
+      <form
+        onsubmit="event.preventDefault();
+      conversationUserAdd(document.getElementById('input-text').value);
+      openai();"
+      >
+        <h1>Voice assistant by Celine</h1>
+        <input type="text" id="input-text" placeholder="Type here !" />
+        <button id="submit-button">Submit</button></center>
+      </form>
+
+      <div id="chat-container"></div>
+    </div>
+  </body>
+</html>

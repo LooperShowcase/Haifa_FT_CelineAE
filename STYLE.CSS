@@ -1,0 +1,138 @@
+/* Reset some default styles */
+html,
+body,
+h1,
+button,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #96dfc9;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#input-text {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #a3e4da;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#submit-button {
+  padding: 10px 20px;
+  background-color: #82dcc6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit-button:hover {
+  background-color: #149f6c;
+}
+/*chat style*/
+/* Adjust chat bubble container layout */
+/* Adjust chat bubble container layout */
+.chat-bubble-container {
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 10px 0;
+  }
+  
+  /* Adjust chat label styling */
+  .chat-label {
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 5px; /* Add margin to separate from chat bubble */
+  }
+  
+  /* Adjust chat bubble styling */
+  .chat-bubble {
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  /* Rest of your existing CSS... */
+  
+  
+
+.user {
+  background-color: #82dcc6;
+  color: #000000;
+}
+
+.assistant {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Add animation to the chat bubbles */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-bubble-container {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Make the chat container scrollable */
+#chat-container {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input[type="text"] {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  button#submit-button {
+    max-width: none;
+  }
+
+  /* Add space between form and chat container */
+  #chat-container {
+    margin-top: 20px;
+  }
+}
